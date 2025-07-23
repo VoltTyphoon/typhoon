@@ -1,0 +1,109 @@
+/* Base fonts and colors */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+body.dark {
+  background: linear-gradient(135deg, #232526, #414345);
+  color: #ddd;
+}
+
+/* Links */
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+body.dark a {
+  color: #66aaff;
+}
+
+/* Layout */
+header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.5em 1em;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body.dark header {
+  background: rgba(0, 0, 0, 0.5);
+}
+header a {
+  margin: 0 0.5em;
+}
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+/* Main content container */
+main {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+/* Card component (timeline events) */
+.card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 1em 0;
+  transition: background 0.3s ease;
+}
+body.dark .card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.card-date {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+.card-text {
+  line-height: 1.6;
+}
+
+/* IoC list styles */
+.ioc-cat-header {
+  cursor: pointer;
+  user-select: none;
+  margin: 1em 0 0.5em;
+}
+.toggle-indicator {
+  font-weight: normal;
+  margin-left: 0.3em;
+}
+.ioc-list {
+  display: none;
+  margin: 0 0 1em 1.5em;
+  list-style: disc;
+}
+.ioc-category.open .ioc-list {
+  display: block;
+}
+.ioc-list li {
+  margin: 0.2em 0;
+}
+.ioc-list code {
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 0.3em;
+  border-radius: 0.2em;
+}
+body.dark .ioc-list code {
+  background: rgba(255, 255, 255, 0.1);
+}
