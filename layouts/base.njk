@@ -11,32 +11,36 @@
 <body>
   <header>
     <nav class="nav">
-      {# ---------- language-specific links ---------- #}
+
+      {# ---------- language-specific nav ---------- #}
       {% if page.lang == 'zh' %}
         <a href="/zh/">首页</a>
         <a href="/zh/timeline/">时间线</a>
         <a href="/zh/ioc/">IoCs</a>
-        {# 切到英文：去掉 /zh 前缀；根路径特判 "/" #}
-        <a id="lang-toggle"
-           href="{{ page.url and page.url != '/' 
-              ? page.url | replace('/zh', '') 
-              : '/' }}">English</a>
+
+        {# 计算英文链接：去掉 /zh 前缀，根路径特判 #}
+        {% if page.url and page.url != '/' %}
+          {% set enHref = page.url | replace('/zh', '') %}
+        {% else %}
+          {% set enHref = '/' %}
+        {% endif %}
+        <a id="lang-toggle" href="{{ enHref }}">English</a>
+
       {% else %}
         <a href="/">Home</a>
         <a href="/timeline/">Timeline</a>
         <a href="/ioc/">IoCs</a>
-        {# 切到中文：在路径前加 /zh #}
-        <a id="lang-toggle"
-           href="/zh{{ page.url or '/' }}">中文</a>
+
+        {# 中文链接：给当前路径加 /zh 前缀 #}
+        {% set zhHref = '/zh' + (page.url or '/') %}
+        <a id="lang-toggle" href="{{ zhHref }}">中文</a>
       {% endif %}
 
       <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </nav>
   </header>
 
-  <main>
-    {{ content | safe }}
-  </main>
+  <main>{{ content | safe }}</main>
 
   <script type="module" src="/static/js/langToggle.js"></script>
   <script type="module" src="/static/js/themeToggle.js"></script>
