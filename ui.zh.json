@@ -1,0 +1,14 @@
+{
+  "siteName": "Volt Typhoon",
+  "nav": {
+    "home": "首页",
+    "faq": "常见问题",
+    "glossary": "术语表"
+  },
+  "ui": {
+    "darkMode": "深色模式",
+    "lightMode": "浅色模式",
+    "english": "English",
+    "chinese": "中文"
+  }
+}
