@@ -1,0 +1,222 @@
+/* Base color scheme variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: rgba(255, 255, 255, 0.6);   /* translucent white for light mode */
+  --card-border: rgba(255, 255, 255, 0.3);
+  --tooltip-bg: #333333;
+  --tooltip-text: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --card-bg: rgba(0, 0, 0, 0.5);       /* translucent dark for dark mode */
+    --card-border: rgba(255, 255, 255, 0.2);
+    --tooltip-bg: #eeeeee;
+    --tooltip-text: #000000;
+  }
+}
+/* Override colors when theme is manually toggled */
+html.theme-light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --card-border: rgba(0, 0, 0, 0.1);
+  --tooltip-bg: #333333;
+  --tooltip-text: #ffffff;
+}
+html.theme-dark {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --card-bg: rgba(0, 0, 0, 0.5);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --tooltip-bg: #eeeeee;
+  --tooltip-text: #000000;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+/* Typography tweaks */
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Bar styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px) saturate(180%);
+  border-bottom: 1px solid var(--card-border);
+  /* Liquid glass shadow for depth */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+.navbar .logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  margin: 0 0.5rem;
+}
+.nav-links a, #lang-toggle, #theme-toggle {
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.nav-links a:hover, #lang-toggle:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.hamburger:focus {
+  outline: 2px solid var(--text-color);
+}
+/* Responsive: show hamburger and hide nav links on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    flex-direction: column;
+    background: var(--card-bg);
+    backdrop-filter: blur(8px) saturate(180%);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+  /* Prevent background scrolling when mobile nav is open */
+  body.nav-open {
+    overflow: hidden;
+  }
+}
+
+/* Main content styling */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin: 0.5rem 0;
+}
+
+/* Card layout for any grid sections (if needed) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px) saturate(160%);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Accordion content styling */
+.accordion-toggle {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+.accordion-toggle::after {
+  content: "▾"; /* arrow indicator */
+  float: right;
+  transition: transform 0.2s;
+}
+.accordion-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  display: none;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(5px) saturate(160%);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+}
+.accordion-content.open {
+  display: block;
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: absolute;
+  max-width: 300px;
+  background: var(--tooltip-bg);
+  color: var(--tooltip-text);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.95;
+}
