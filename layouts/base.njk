@@ -1,10 +1,10 @@
+<!-- layouts/base.njk  ★整文件覆盖★ -->
 <!DOCTYPE html>
 <html lang="{{ page.lang or 'en' }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ title }} | Volt Typhoon</title>
-
   <link rel="stylesheet" href="/static/css/glass.css" />
 </head>
 
@@ -18,7 +18,6 @@
         <a href="/zh/timeline/">时间线</a>
         <a href="/zh/ioc/">IoCs</a>
 
-        {# 计算英文链接：去掉 /zh 前缀，根路径特判 #}
         {% if page.url and page.url != '/' %}
           {% set enHref = page.url | replace('/zh', '') %}
         {% else %}
@@ -31,7 +30,6 @@
         <a href="/timeline/">Timeline</a>
         <a href="/ioc/">IoCs</a>
 
-        {# 中文链接：给当前路径加 /zh 前缀 #}
         {% set zhHref = '/zh' + (page.url or '/') %}
         <a id="lang-toggle" href="{{ zhHref }}">中文</a>
       {% endif %}
@@ -40,7 +38,12 @@
     </nav>
   </header>
 
-  <main>{{ content | safe }}</main>
+  <!-- ✅ 让子模板真正渲染 -->
+  <main>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </main>
 
   <script type="module" src="/static/js/langToggle.js"></script>
   <script type="module" src="/static/js/themeToggle.js"></script>
