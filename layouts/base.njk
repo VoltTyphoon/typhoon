@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default('en') }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }} - Volt Typhoon</title>
+  <link rel="stylesheet" href="/static/css/glass.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ page.lang=='zh' ? '/zh/' : '/' }}">{{ page.lang=='zh' ? '首页' : 'Home' }}</a>
+      <a href="{{ page.lang=='zh' ? '/zh/timeline/' : '/timeline/' }}">{{ page.lang=='zh' ? '时间线' : 'Timeline' }}</a>
+      <a href="{{ page.lang=='zh' ? '/zh/ioc/' : '/ioc/' }}">{{ page.lang=='zh' ? 'IoCs' : 'IoCs' }}</a>
+      {% if page.url and page.url.startsWith('/zh') %}
+        <a id="lang-toggle" href="{{ page.url | replace('/zh', '') }}">English</a>
+      {% else %}
+        <a id="lang-toggle" href="/zh{{ page.url or '/' }}">中文</a>
+      {% endif %}
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+  <main>{{ content | safe }}</main>
+  <script src="/static/js/langToggle.js"></script>
+  <script src="/static/js/themeToggle.js"></script>
+  <script src="/static/js/iocToggle.js"></script>
+</body>
+</html>
