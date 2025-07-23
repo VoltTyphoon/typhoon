@@ -1,0 +1,14 @@
+{
+  "siteName": "Volt Typhoon",
+  "nav": {
+    "home": "Home",
+    "faq": "FAQ",
+    "glossary": "Glossary"
+  },
+  "ui": {
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "english": "English",
+    "chinese": "中文"
+  }
+}
