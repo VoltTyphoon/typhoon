@@ -1,0 +1,38 @@
+[
+  {
+    "date": "Mid-2021",
+    "description": "Volt Typhoon begins cyber-espionage operations, with activity traced back to mid-2021 [oai_citation:0‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=Volt%20Typhoon%20,3)."
+  },
+  {
+    "date": "May 24, 2023",
+    "description": "Five Eyes cybersecurity agencies issue a joint advisory publicly exposing Volt Typhoon’s campaign against U.S. critical infrastructure [oai_citation:1‡cisa.gov](https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-144a#:~:text=Release%20Date)."
+  },
+  {
+    "date": "January 2024",
+    "description": "The FBI announces it disrupted Volt Typhoon’s operations through a court-authorized December 2023 operation to remove malware from compromised routers [oai_citation:2‡globalcyberalliance.org](https://globalcyberalliance.org/tracing-volt-typhoon-insights-from-gcas-aide-honey-farm/#:~:text=As%20you%20may%20have%20seen,SOHO%20routers%20and%20maintaining%20persistent) [oai_citation:3‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=In%20January%202024%2C%20the%20FBI,18)."
+  },
+  {
+    "date": "June 2024",
+    "description": "Chinese hackers of Volt Typhoon breach Singapore’s Singtel telecommunications network [oai_citation:4‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=)."
+  },
+  {
+    "date": "August 27, 2024",
+    "description": "Researchers report Volt Typhoon’s exploitation of a zero-day flaw (CVE-2024-39717) in Versa Networks appliances to infiltrate U.S. tech and telecom firms [oai_citation:5‡therecord.media](https://therecord.media/versa-zero-day-volt-typhoon-china#:~:text=Daryna%20AntoniukAugust%2027th%2C%202024)."
+  },
+  {
+    "date": "October 15, 2024",
+    "description": "China’s government denies involvement with Volt Typhoon, calling it a U.S. “misinformation” campaign via state media (Xinhua) [oai_citation:6‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=The%20Chinese%20government%20denied%20any,7)."
+  },
+  {
+    "date": "November 5, 2024",
+    "description": "Bloomberg News reveals the Singtel breach; Singtel responds that it has eradicated Volt Typhoon’s malware from its systems [oai_citation:7‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=)."
+  },
+  {
+    "date": "March 2025",
+    "description": "The U.S. House Homeland Security Committee presses the Department of Homeland Security for documents on the federal response to Volt Typhoon’s hacking [oai_citation:8‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=based%20victim%20routers%2C%20and%20taking,18)."
+  },
+  {
+    "date": "April 2025",
+    "description": "The Wall Street Journal reports that Chinese officials tacitly admitted China’s connection to Volt Typhoon during a December 2024 meeting in Geneva [oai_citation:9‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=In%20April%202025%2C%20The%20Wall,20)."
+  }
+]
