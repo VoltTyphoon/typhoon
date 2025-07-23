@@ -1,13 +1,16 @@
-module.exports = function(eleventyConfig) {
-  // Copy static assets to output
+module.exports = function (eleventyConfig) {
+  /* —— Passthrough —— */
+  // 如果 static 在仓库根目录
   eleventyConfig.addPassthroughCopy("static");
-  // Eleventy configuration
+
+  // 如果 static 在 src/static，则：
+  // eleventyConfig.addPassthroughCopy({ "src/static": "static" });
+
+  /* —— 其他配置保持原样 —— */
   return {
     dir: {
-      input: ".",             // source files root
-      includes: "layouts",    // layouts/ directory for templates
-      data: "data",           // data/ directory for global data files
-      output: "_site"         // output directory
+      input: ".",          // 如果你改成 "src"，就把上面路径改为 "src/static"
+      output: "_site"
     }
   };
 };
