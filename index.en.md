@@ -1,0 +1,13 @@
+---
+title: "Volt Typhoon"
+lang: "en"
+layout: "page.njk"
+---
+
+**Volt Typhoon** is an advanced persistent threat (APT) group attributed to the Chinese state, active since at least mid-2021 [oai_citation:20‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=Volt%20Typhoon%20,3). It primarily targets critical infrastructure in the United States, engaging in cyberespionage and data theft [oai_citation:21‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=Volt%20Typhoon%20,3). Volt Typhoon is known for stealthy “living-off-the-land” tactics, using built-in administration tools (e.g. WMIC, Ntdsutil, PowerShell) instead of malware to evade detection [oai_citation:22‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=Volt%20Typhoon%20focuses%20on%20espionage%2C,3).
+
+According to Microsoft, Volt Typhoon’s campaign may enable China to sabotage U.S. communications infrastructure during a future crisis (such as a conflict over Taiwan) [oai_citation:23‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=According%20to%20Microsoft%20%2C%20the,7). Indeed, U.S. and allied agencies have observed Volt Typhoon penetrating networks in Guam and elsewhere as a preemptive effort to disrupt critical systems in the event of war [oai_citation:24‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=The%20US%20government%20has%20repeatedly,3).
+
+The threat was first publicly revealed in May 2023, when U.S. and Five Eyes cybersecurity agencies issued a joint advisory about Volt Typhoon’s activities [oai_citation:25‡cisa.gov](https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-144a#:~:text=Release%20Date). In early 2024, the FBI conducted court-authorized operations to eliminate Volt Typhoon malware from compromised routers, temporarily disrupting the group’s infrastructure [oai_citation:26‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=In%20January%202024%2C%20the%20FBI,18). Volt Typhoon has also struck abroad – for example, breaching Singapore’s Singtel telecom network in 2024 [oai_citation:27‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=).
+
+The Chinese government has denied any involvement with Volt Typhoon [oai_citation:28‡en.wikipedia.org](https://en.wikipedia.org/wiki/Volt_Typhoon#:~:text=The%20Chinese%20government%20denied%20any,7). Nevertheless, Western officials consider Volt Typhoon a serious long-term threat to critical infrastructure cybersecurity. For a chronological overview of the group’s operations, see the [Timeline](/timeline/) page, and visit the [IoCs](/ioc/) page for a list of technical indicators associated with Volt Typhoon.
