@@ -1,11 +1,7 @@
 {
-  "name": "typhoon-website",
-  "private": true,
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.0"
+    "assets": "tailwindcss -i ./src/style.css -o ./static/css/glass.css --minify", // 如果你根本没用 Tailwind，把这一行删掉
+    "eleventy": "npx @11ty/eleventy",
+    "build": "npm run assets && npm run eleventy"      // 关键：让 Cloudflare 执行这一条
   }
 }
